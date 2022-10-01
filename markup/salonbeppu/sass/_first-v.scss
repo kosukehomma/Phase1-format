@@ -1,0 +1,43 @@
+.first-v {
+  display: flex;
+  width: 100%;
+  height: 800px;
+
+  &-catch {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__box {
+      width: 390px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: right;
+    }
+  }
+
+  &-lead {
+    font-size: 3.8rem;
+    font-family: "ヒラギノ明朝 Pro";
+  }
+
+  &-title {
+    font-size: 3.8rem;
+    font-family: Zapfino;
+  }
+
+  &-img {
+    width: 54%;
+
+    img {
+      width: 100%;
+      height: 800px;
+      object-fit: cover;
+      object-position: top right;
+    }
+  }
+}

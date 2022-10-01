@@ -1,0 +1,42 @@
+.menu {
+  background: #fff;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-item {
+    max-width: 274px;
+  }
+
+  &-img {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &-detail {
+    padding: 0 10px;
+    font-size: 1.6rem;
+    letter-spacing: 1.6px;
+  }
+
+  &-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding: 37px 0 34px;
+    text-align: center;
+  }
+
+  &-text {
+    margin-bottom: 34px;
+  }
+
+  &-price {
+    text-align: right;
+  }
+}

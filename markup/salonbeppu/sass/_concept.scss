@@ -1,0 +1,49 @@
+.concept {
+  width: 100%;
+  background-image:
+   linear-gradient(
+    to bottom, 
+    $bg-color1 0% 42%, 
+    $bg-color2 42% 100%
+  );
+
+  &-img {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 100%;
+      height: 413px;
+      object-fit: cover;
+    }
+
+    &__1 {
+      width: 63%;
+    }
+
+    &__2 {
+      width: 36%;
+    }
+  }
+
+  &-catch {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+  }
+
+  &-lead {
+    @extend .first-v-lead;
+    font-size: 4rem;
+    letter-spacing: 16px;
+    margin-top: 1.5rem;
+    margin-right: -50px;
+  }
+
+  &-text {
+    font-size: 1.6rem;
+    letter-spacing: 1.6px;
+    width: 422px;
+  }
+}

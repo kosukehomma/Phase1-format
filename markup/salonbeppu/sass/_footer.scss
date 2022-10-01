@@ -1,0 +1,40 @@
+.footer {
+  width: 100%;
+  margin-top: 165px;
+
+  &-box {
+    width: 83%;
+    margin: 0 auto;
+    padding: 83px 0 62px;
+    border-top: 1px solid $footer-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    font-size: 3.2rem;
+    color: $footer-color;
+    display: flex;
+    align-items: center;
+    letter-spacing: 3.2px;
+  }
+}
+
+.ftr-icon {
+  color: #000;
+  margin-left: 10px;
+  font-size: 2.2rem;
+  &:first-of-type {
+    margin-left: 26px;
+  }
+}
+
+.footer-btn {
+  width: 185px;
+  height: 37px;
+  color: $read-color;
+  border: 1px solid $read-color;
+  font-size: 1.8rem;
+  letter-spacing: 1.8px;
+  background-color: inherit;
+}

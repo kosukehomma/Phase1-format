@@ -1,0 +1,40 @@
+.access {
+  background-color: $bg-color1;
+  padding-bottom: 70px;
+
+  .inner {
+    padding-bottom: 0;
+  }
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    background-color: $bg-color2;
+    
+  }
+
+  &-place {
+    width: 39%;
+    transform: translate(21%);
+    
+    &__shop {
+      color: $access-title;
+      font-size: 2.4rem;
+      letter-spacing: 2.4px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      color: #fff;
+      font-size: 1.6rem;
+      letter-spacing: 1.6px;
+      line-height: 3.8rem;
+    }
+  }
+
+  &-map {
+    width: 61%;
+    height: 396px;
+  }
+}

@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+a:visited {
+  color: inherti; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*# sourceMappingURL=reset.css.map */
+/* mixin */
+/* 色の変数 */
+/* 共通部分 */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #000;
+  font-family: Roboto, "ヒラギノ角ゴ Pro"; }
+
+.inner {
+  width: 83%;
+  padding: 255px 0 67px;
+  margin: 0 auto; }
+  @media (max-width: 980px) {
+    .inner {
+      width: 90%;
+      padding: 50px 0; } }
+
+.title {
+  color: #707070;
+  font-size: 1.8rem;
+  letter-spacing: 5.4px;
+  display: flex;
+  align-items: center; }
+  .title::after {
+    content: "";
+    display: inline-block;
+    width: 105px;
+    border-top: 1px solid #707070;
+    margin-left: 20px; }
+
+.header {
+  width: 100%;
+  background-color: inherit;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 68px 0 0 77px;
+  position: absolute; }
+  .header-logo {
+    font-size: 3.8rem;
+    margin-right: 20px;
+    letter-spacing: 3.8px; }
+  .header-menu ul {
+    display: flex; }
+    .header-menu ul li {
+      font-size: 1.8rem;
+      margin-right: 20px;
+      color: #707070;
+      letter-spacing: 1.8px;
+      cursor: pointer;
+      position: relative; }
+      .header-menu ul li:last-child {
+        margin-right: 0; }
+      .header-menu ul li::before {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 50px;
+        height: 1px;
+        background: #000;
+        bottom: 0;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.3s; }
+      .header-menu ul li:hover {
+        color: initial;
+        transition: .4s; }
+        .header-menu ul li:hover::before {
+          transform: scale(1, 1); }
+
+.ham {
+  display: none; }
+  @media (max-width: 980px) {
+    .ham {
+      display: flex;
+      width: 25px;
+      height: 14px;
+      justify-content: space-between;
+      flex-direction: column; }
+      .ham span {
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #000; } }
+
+.first-v {
+  display: flex;
+  width: 100%;
+  height: 800px; }
+  .first-v-catch {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .first-v-catch__box {
+      width: 390px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: right; }
+  .first-v-lead, .concept-lead {
+    font-size: 3.8rem;
+    font-family: "ヒラギノ明朝 Pro"; }
+  .first-v-title {
+    font-size: 3.8rem;
+    font-family: Zapfino; }
+  .first-v-img {
+    width: 54%; }
+    .first-v-img img {
+      width: 100%;
+      height: 800px;
+      object-fit: cover;
+      object-position: top right; }
+
+.concept {
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(161, 147, 134, 0.12) 0% 42%, rgba(161, 147, 134, 0.54) 42% 100%); }
+  .concept-img {
+    display: flex;
+    justify-content: space-between; }
+    .concept-img img {
+      width: 100%;
+      height: 413px;
+      object-fit: cover; }
+    .concept-img__1 {
+      width: 63%; }
+    .concept-img__2 {
+      width: 36%; }
+  .concept-catch {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px; }
+  .concept-lead {
+    font-size: 4rem;
+    letter-spacing: 16px;
+    margin-top: 1.5rem;
+    margin-right: -50px; }
+  .concept-text {
+    font-size: 1.6rem;
+    letter-spacing: 1.6px;
+    width: 422px; }
+
+.menu {
+  background: #fff; }
+  .menu-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .menu-item {
+    max-width: 274px; }
+  .menu-img {
+    width: 100%; }
+    .menu-img img {
+      width: 100%;
+      object-fit: cover; }
+  .menu-detail {
+    padding: 0 10px;
+    font-size: 1.6rem;
+    letter-spacing: 1.6px; }
+  .menu-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding: 37px 0 34px;
+    text-align: center; }
+  .menu-text {
+    margin-bottom: 34px; }
+  .menu-price {
+    text-align: right; }
+
+.access {
+  background-color: rgba(161, 147, 134, 0.12);
+  padding-bottom: 70px; }
+  .access .inner {
+    padding-bottom: 0; }
+  .access-wrap {
+    display: flex;
+    align-items: center;
+    background-color: rgba(161, 147, 134, 0.54); }
+  .access-place {
+    width: 39%;
+    transform: translate(21%); }
+    .access-place__shop {
+      color: rgba(0, 0, 0, 0.22);
+      font-size: 2.4rem;
+      letter-spacing: 2.4px;
+      font-weight: bold;
+      margin-bottom: 12px; }
+    .access-place__text {
+      color: #fff;
+      font-size: 1.6rem;
+      letter-spacing: 1.6px;
+      line-height: 3.8rem; }
+  .access-map {
+    width: 61%;
+    height: 396px; }
+
+.footer {
+  width: 100%;
+  margin-top: 165px; }
+  .footer-box {
+    width: 83%;
+    margin: 0 auto;
+    padding: 83px 0 62px;
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer-logo {
+    font-size: 3.2rem;
+    color: rgba(112, 112, 112, 0.3);
+    display: flex;
+    align-items: center;
+    letter-spacing: 3.2px; }
+
+.ftr-icon {
+  color: #000;
+  margin-left: 10px;
+  font-size: 2.2rem; }
+  .ftr-icon:first-of-type {
+    margin-left: 26px; }
+
+.footer-btn {
+  width: 185px;
+  height: 37px;
+  color: #707070;
+  border: 1px solid #707070;
+  font-size: 1.8rem;
+  letter-spacing: 1.8px;
+  background-color: inherit; }
+
+/*# sourceMappingURL=style.css.map */
