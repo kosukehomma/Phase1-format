@@ -101,7 +101,8 @@ input, select {
 /* 色の変数 */
 /* 共通部分 */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-size: 1.6rem;
@@ -208,7 +209,7 @@ body {
 .first-v {
   display: flex;
   width: 100%;
-  height: 800px; }
+  height: 100vh; }
   @media (max-width: 580px) {
     .first-v {
       flex-direction: column; } }
@@ -224,7 +225,7 @@ body {
         color: #fff;
         position: absolute;
         top: 50%;
-        transform: translate(0%, -50%); } }
+        transform: translate(0%, -5%); } }
     .first-v-catch__box {
       width: 390px;
       height: 200px;
@@ -257,9 +258,8 @@ body {
         width: 100%; } }
     .first-v-img img {
       width: 100%;
-      height: 800px;
-      object-fit: cover;
-      object-position: top right; }
+      height: 100vh;
+      object-fit: cover; }
       @media (max-width: 960px) {
         .first-v-img img {
           object-position: top center; } }
