@@ -2,6 +2,9 @@
   display: flex;
   width: 100%;
   height: 800px;
+  @include sp {
+    flex-direction: column;
+  }
 
   &-catch {
     width: 46%;
@@ -9,6 +12,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    @include sp {
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+
     &__box {
       width: 390px;
       height: 200px;
@@ -17,27 +29,49 @@
       justify-content: space-between;
       align-items: center;
       text-align: right;
+      font-size: 3.8rem;
+      @include tab {
+        width: 260px;
+        height: 150px;
+        font-size: 2.8rem;
+      }
+      @include sp {
+        flex-direction: column-reverse;
+        height: 100px;
+      }
     }
   }
 
   &-lead {
-    font-size: 3.8rem;
     font-family: "ヒラギノ明朝 Pro";
+    @include sp {
+      font-size: 2.3rem;
+    }
   }
 
   &-title {
-    font-size: 3.8rem;
     font-family: Zapfino;
   }
 
   &-img {
     width: 54%;
+    @include sp {
+      width: 100%;
+    }
 
     img {
       width: 100%;
       height: 800px;
       object-fit: cover;
       object-position: top right;
+      @include tab {
+        object-position: top center;
+      }
+      @include sp {
+        object-fit: cover;
+        object-position: top left;
+
+      }
     }
   }
 }

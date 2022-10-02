@@ -5,10 +5,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tab {
+      flex-direction: column;
+    }
   }
 
   &-item {
     max-width: 274px;
+    @include tab {
+      max-width: 600px;
+      margin-bottom: 63px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-img {
