@@ -10,6 +10,23 @@ td {
   font-size: 20px;
 }
 
+#bingoSheet {
+  border: 2px solid #111;
+  width: 300px;
+  height: 300px;
+  background-color:rgb(174, 216, 186);
+}
+
+#bingoSheet th,
+#bingoSheet td {
+  border: 2px solid #222;
+  width: 60px;
+  height: 40px;
+}
+
+.bingoTitle {
+  font-weight: bold;
+}
 /* チャレンジ問題 */
 
 /* .hit-num {
