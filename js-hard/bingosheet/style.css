@@ -12,26 +12,29 @@ td {
 
 #bingoSheet {
   border: 2px solid #111;
-  width: 300px;
-  height: 300px;
+
   background-color:rgb(174, 216, 186);
 }
 
 #bingoSheet th,
 #bingoSheet td {
   border: 2px solid #222;
-  width: 60px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .bingoTitle {
   font-weight: bold;
+  font-size: 28px;
 }
 /* チャレンジ問題 */
 
-/* .hit-num {
+.hit-num {
   background-color: black ;
+  font-size: 16px;
   color: rgb(70, 206, 216) ;
-} */
+}
 
 /* チャレンジ問題 ここまで */

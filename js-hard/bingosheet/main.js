@@ -1,4 +1,5 @@
 const bingoSheet = document.getElementById('bingoSheet');
+
 const thead = document.createElement('thead');
 const tbody = document.createElement('tbody');
 const trHead = document.createElement('tr');
@@ -48,9 +49,10 @@ const [
   bCol5, iCol5, nCol5, gCol5, oCol5,
 ] = colArea;
 
+const numArr = [];
+
 const bColRandomNum = () => {
   let arr = [];
-  numArr = [];
   for(let i = 0; i < 15; i++) {
     arr[i] = i + 1;
   }
@@ -68,82 +70,80 @@ const bColRandomNum = () => {
 
 const iColRandomNum = () => {
   let arr = [];
-  numArr = [];
   for(let i = 15; i < 30; i++) {
     arr[i] = i + 1;
   }
-  console.log(arr);
+
   for(let j = 0, len = arr.length; j < 5; j++, len--) {
     let rndNum = Math.floor(Math.random() * (30 - 15) + 15);
     numArr.push(arr[rndNum]);
     arr[rndNum] = arr[len - 1];
   }
-  console.log(numArr);
-  iCol1.textContent = numArr[0];
-  iCol2.textContent = numArr[1];
-  iCol3.textContent = numArr[2];
-  iCol4.textContent = numArr[3];
-  iCol5.textContent = numArr[4];
+
+  iCol1.textContent = numArr[5];
+  iCol2.textContent = numArr[6];
+  iCol3.textContent = numArr[7];
+  iCol4.textContent = numArr[8];
+  iCol5.textContent = numArr[9];
 };
 
 const nColRandomNum = () => {
   let arr = [];
-  numArr = [];
   for(let i = 30; i < 45; i++) {
     arr[i] = i + 1;
   }
-  console.log(arr);
+
   for(let j = 0, len = arr.length; j < 4; j++, len--) {
     let rndNum = Math.floor(Math.random() * (45 - 30) + 30);
     numArr.push(arr[rndNum]);
     arr[rndNum] = arr[len - 1];
   }
-  console.log(numArr);
-  nCol1.textContent = numArr[0];
-  nCol2.textContent = numArr[1];
+
+  nCol1.textContent = numArr[10];
+  nCol2.textContent = numArr[11];
   nCol3.textContent = 'FREE';
-  nCol4.textContent = numArr[2];
-  nCol5.textContent = numArr[3];
+  nCol4.textContent = numArr[12];
+  nCol5.textContent = numArr[13];
+
+  nCol3.setAttribute('class', 'hit-num')
 };
 
 const gColRandomNum = () => {
   let arr = [];
-  numArr = [];
   for(let i = 45; i < 60; i++) {
     arr[i] = i + 1;
   }
-  console.log(arr);
+
   for(let j = 0, len = arr.length; j < 5; j++, len--) {
     let rndNum = Math.floor(Math.random() * (60 - 45) + 45);
     numArr.push(arr[rndNum]);
     arr[rndNum] = arr[len - 1];
   }
-  console.log(numArr);
-  gCol1.textContent = numArr[0];
-  gCol2.textContent = numArr[1];
-  gCol3.textContent = numArr[2];
-  gCol4.textContent = numArr[3];
-  gCol5.textContent = numArr[4];
+
+  gCol1.textContent = numArr[14];
+  gCol2.textContent = numArr[15];
+  gCol3.textContent = numArr[16];
+  gCol4.textContent = numArr[17];
+  gCol5.textContent = numArr[18];
 };
 
 const oColRandomNum = () => {
   let arr = [];
-  numArr = [];
   for(let i = 60; i < 75; i++) {
     arr[i] = i + 1;
   }
-  console.log(arr);
+
   for(let j = 0, len = arr.length; j < 5; j++, len--) {
     let rndNum = Math.floor(Math.random() * (75 - 60) + 60);
     numArr.push(arr[rndNum]);
     arr[rndNum] = arr[len - 1];
   }
-  console.log(numArr);
-  oCol1.textContent = numArr[0];
-  oCol2.textContent = numArr[1];
-  oCol3.textContent = numArr[2];
-  oCol4.textContent = numArr[3];
-  oCol5.textContent = numArr[4];
+
+  oCol1.textContent = numArr[19];
+  oCol2.textContent = numArr[20];
+  oCol3.textContent = numArr[21];
+  oCol4.textContent = numArr[22];
+  oCol5.textContent = numArr[23];
 };
 
 bColRandomNum();
@@ -151,12 +151,10 @@ iColRandomNum();
 nColRandomNum();
 gColRandomNum();
 oColRandomNum();
+console.log(numArr);
 
 const setBtn = document.getElementById('hitNum');
 setBtn.addEventListener('click', () => {
-  bColRandomNum();
-  iColRandomNum();
-  nColRandomNum();
-  gColRandomNum();
-  oColRandomNum();
+  const callNum = Math.floor(Math.random() * 75 + 1);
+
 });
